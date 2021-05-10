@@ -6,7 +6,15 @@ class Market extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text('マーケット'),
+        title: ElevatedButton(
+          child: Text('ブランドやスニーカー名で検索'),
+          style: ElevatedButton.styleFrom(
+            primary: Colors.white30,
+            onPrimary: Colors.grey,
+            shape: StadiumBorder(),
+          ),
+          onPressed: () {},
+        ),
         actions: [
           Row(
             children: [
