@@ -56,6 +56,11 @@ class Market extends StatelessWidget {
           )
         ],
       ),
+      body: Container(
+        child: Center(
+          child: Text('スニーカー'),
+        ),
+      ),
     );
   }
 }
