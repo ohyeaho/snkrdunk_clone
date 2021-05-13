@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Market extends StatelessWidget {
+class Menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('マイページ'),
+        title: Text('メニュー'),
       ),
     );
   }

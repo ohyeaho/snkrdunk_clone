@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:snkrdunk_clone/screens/market.dart';
+import 'package:snkrdunk_clone/screens/my_page/menu/menu.dart';
+import 'package:snkrdunk_clone/screens/my_page/my_page.dart';
 
 import 'home.dart';
 
@@ -19,6 +21,8 @@ class MyApp extends StatelessWidget {
       home: Home(),
       routes: {
         '/market': (context) => Market(),
+        '/my_page': (context) => MyPage(),
+        '/menu': (context) => Menu(),
       },
     );
   }

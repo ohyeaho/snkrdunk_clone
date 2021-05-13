@@ -39,6 +39,12 @@ class _HomeState extends State<Home> {
                   Navigator.pushNamed(context, '/market');
                 },
               ),
+              ElevatedButton(
+                child: Text('マイページ'),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/my_page');
+                },
+              ),
             ],
           ),
         ),
