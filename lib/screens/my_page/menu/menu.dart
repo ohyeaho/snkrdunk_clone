@@ -7,6 +7,7 @@ class Menu extends StatelessWidget {
       appBar: AppBar(
         title: Text('メニュー'),
       ),
+      body: Container(),
     );
   }
 }
