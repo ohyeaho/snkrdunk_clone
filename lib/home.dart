@@ -51,6 +51,12 @@ class _HomeState extends State<Home> {
                   Navigator.pushNamed(context, '/sign_up');
                 },
               ),
+              ElevatedButton(
+                child: Text('ログイン'),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/login');
+                },
+              ),
             ],
           ),
         ),
@@ -58,14 +64,3 @@ class _HomeState extends State<Home> {
     );
   }
 }
-
-// class AuthenticationWrapper extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     final firebaseUser = context.watch<User>();
-//     if (firebaseUser != null) {
-//       return MainPage();
-//     }
-//     return SignInModal();
-//   }
-// }

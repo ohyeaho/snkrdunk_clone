@@ -1,11 +1,6 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:snkrdunk_clone/services/authentication_service.dart';
-import 'package:snkrdunk_clone/services/cloud_firebase.dart';
 
-class SignUp extends StatelessWidget {
-  final TextEditingController nameController = TextEditingController();
+class Login extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
@@ -42,7 +37,7 @@ class SignUp extends StatelessWidget {
         ),
         title: Title(
           child: Text(
-            '会員登録(無料)',
+            'ログイン',
             style: TextStyle(
               color: Colors.black,
               fontWeight: FontWeight.bold,
@@ -66,7 +61,7 @@ class SignUp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    '会員登録(無料)',
+                    'ログイン',
                     style: TextStyle(
                       fontSize: 23,
                       fontWeight: FontWeight.w600,
@@ -74,10 +69,10 @@ class SignUp extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () {
-                      Navigator.pushReplacementNamed(context, "/login");
+                      Navigator.pushReplacementNamed(context, "/sign_up");
                     },
                     child: Text(
-                      'ログイン',
+                      '会員登録(無料)',
                       style: TextStyle(
                         color: Colors.blueAccent,
                         fontWeight: FontWeight.w600,
@@ -85,28 +80,6 @@ class SignUp extends StatelessWidget {
                     ),
                   ),
                 ],
-              ),
-            ),
-            Container(
-              margin: const EdgeInsets.only(
-                top: 10,
-              ),
-              width: 300,
-              child: TextFormField(
-                style: TextStyle(
-                  fontSize: 20,
-                ),
-                textAlign: TextAlign.left,
-                controller: nameController,
-                decoration: InputDecoration(
-                  labelText: 'ユーザー名',
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(5),
-                    borderSide: BorderSide(
-                      color: Color(0xFFD1D1D1),
-                    ),
-                  ),
-                ),
               ),
             ),
             Container(
@@ -155,29 +128,6 @@ class SignUp extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(
-                top: 25.0,
-              ),
-              child: MaterialButton(
-                materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                onPressed: () {
-                  Navigator.pushNamed(context, "/signup_policy");
-                },
-                minWidth: 0,
-                height: 0,
-                padding: EdgeInsets.zero,
-                child: Text(
-                  '下の会員登録ボタンを押すことで、\n利用規約・プライバシーポリシーに同意したことになります。',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 13,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.black,
-                  ),
-                ),
-              ),
-            ),
-            Container(
               height: 50,
               width: 300,
               margin: EdgeInsets.only(
@@ -185,24 +135,25 @@ class SignUp extends StatelessWidget {
               ),
               child: ElevatedButton(
                 onPressed: () async {
-                  context.read<AuthenticationService>().signUp(
-                        name: nameController.text.trim(),
-                        email: emailController.text.trim(),
-                        password: passwordController.text.trim(),
-                      );
-                  FirebaseAuth.instance.authStateChanges().listen((User user) {
-                    if (user != null) {
-                      Navigator.pushReplacementNamed(context, "/map");
-                      UserManage().setUserAccount(
-                          email: emailController.text.trim(),
-                          password: passwordController.text.trim());
-                    } else {
-                      _showErrorDialog(context);
-                    }
-                  });
+                  // context.read<AuthenticationService>().signUp(
+                  //       email: emailController.text.trim(),
+                  //       password: passwordController.text.trim(),
+                  //     );
+                  // FirebaseAuth.instance
+                  //     .authStateChanges()
+                  //     .listen((User user) {
+                  //   if (user != null) {
+                  //     Navigator.pushReplacementNamed(context, "/map");
+                  //     UserManage().setUserAccount(
+                  //         email: emailController.text.trim(),
+                  //         password: passwordController.text.trim());
+                  //   } else {
+                  //     _showErrorDialog(context);
+                  //   }
+                  // });
                 },
                 child: Text(
-                  '会員登録(無料)',
+                  'ログイン',
                   style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.w600,
@@ -221,13 +172,35 @@ class SignUp extends StatelessWidget {
               child: MaterialButton(
                 materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, "/login");
+                  Navigator.pushReplacementNamed(context, "/sign_up");
                 },
                 minWidth: 0,
                 height: 0,
                 padding: EdgeInsets.zero,
                 child: Text(
-                  '既に登録済みの方はこちら',
+                  '新規会員登録(無料)はこちら',
+                  style: TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w700,
+                    color: Color(0xFF4739F0),
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(
+                top: 10,
+              ),
+              child: MaterialButton(
+                materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                onPressed: () {
+                  //todo
+                },
+                minWidth: 0,
+                height: 0,
+                padding: EdgeInsets.zero,
+                child: Text(
+                  'パスワードを忘れた方',
                   style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w700,
