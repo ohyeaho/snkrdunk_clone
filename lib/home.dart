@@ -22,15 +22,13 @@ class _HomeState extends State<Home> {
               ElevatedButton(
                 child: Text('ログイン'),
                 onPressed: () {
-                  //todo
-                  //Navigator.pushNamed(context, '/login_page');
+                  Navigator.pushNamed(context, '/login');
                 },
               ),
               ElevatedButton(
                 child: Text('ユーザー登録'),
                 onPressed: () {
-                  //todo
-                  // Navigator.pushNamed(context, '/signup_page');
+                  Navigator.pushNamed(context, '/sign_up');
                 },
               ),
               ElevatedButton(
@@ -43,18 +41,6 @@ class _HomeState extends State<Home> {
                 child: Text('マイページ'),
                 onPressed: () {
                   Navigator.pushNamed(context, '/my_page');
-                },
-              ),
-              ElevatedButton(
-                child: Text('サインアップ'),
-                onPressed: () {
-                  Navigator.pushNamed(context, '/sign_up');
-                },
-              ),
-              ElevatedButton(
-                child: Text('ログイン'),
-                onPressed: () {
-                  Navigator.pushNamed(context, '/login');
                 },
               ),
             ],

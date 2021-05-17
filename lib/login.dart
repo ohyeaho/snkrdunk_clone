@@ -1,4 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:snkrdunk_clone/services/authentication_service.dart';
 
 class Login extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
@@ -134,23 +137,18 @@ class Login extends StatelessWidget {
                 top: 20,
               ),
               child: ElevatedButton(
-                onPressed: () async {
-                  // context.read<AuthenticationService>().signUp(
-                  //       email: emailController.text.trim(),
-                  //       password: passwordController.text.trim(),
-                  //     );
-                  // FirebaseAuth.instance
-                  //     .authStateChanges()
-                  //     .listen((User user) {
-                  //   if (user != null) {
-                  //     Navigator.pushReplacementNamed(context, "/map");
-                  //     UserManage().setUserAccount(
-                  //         email: emailController.text.trim(),
-                  //         password: passwordController.text.trim());
-                  //   } else {
-                  //     _showErrorDialog(context);
-                  //   }
-                  // });
+                onPressed: () {
+                  context.read<AuthenticationService>().signIn(
+                        email: emailController.text.trim(),
+                        password: passwordController.text.trim(),
+                      );
+                  FirebaseAuth.instance.authStateChanges().listen(
+                    (User user) {
+                      if (user != null) {
+                        Navigator.pushReplacementNamed(context, "/menu");
+                      }
+                    },
+                  );
                 },
                 child: Text(
                   'ログイン',

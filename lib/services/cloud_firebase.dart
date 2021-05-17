@@ -52,7 +52,9 @@ class UserManage {
   }
 
   Future<void> setUserAccount(
-      {String name, @required String email, @required String password}) {
+      {@required String name,
+      @required String email,
+      @required String password}) {
     return users
         .doc(user.uid)
         .set({'name': name, 'email': email, 'password': password, 'uri': ''})

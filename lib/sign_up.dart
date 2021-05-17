@@ -9,6 +9,8 @@ class SignUp extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
+  // String name = '';
+
   void _showErrorDialog(BuildContext context) {
     showDialog(
       context: context,
@@ -184,7 +186,7 @@ class SignUp extends StatelessWidget {
                 top: 20,
               ),
               child: ElevatedButton(
-                onPressed: () async {
+                onPressed: () {
                   context.read<AuthenticationService>().signUp(
                         name: nameController.text.trim(),
                         email: emailController.text.trim(),
@@ -192,8 +194,9 @@ class SignUp extends StatelessWidget {
                       );
                   FirebaseAuth.instance.authStateChanges().listen((User user) {
                     if (user != null) {
-                      Navigator.pushReplacementNamed(context, "/map");
+                      Navigator.pushReplacementNamed(context, "/menu");
                       UserManage().setUserAccount(
+                          name: nameController.text.trim(),
                           email: emailController.text.trim(),
                           password: passwordController.text.trim());
                     } else {
