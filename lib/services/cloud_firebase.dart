@@ -52,12 +52,17 @@ class UserManage {
   }
 
   Future<void> setUserAccount(
-      {@required String name,
+      {@required String userName,
       @required String email,
       @required String password}) {
     return users
         .doc(user.uid)
-        .set({'name': name, 'email': email, 'password': password, 'uri': ''})
+        .set({
+          'userName': userName,
+          'email': email,
+          'password': password,
+          'uri': ''
+        })
         .then((value) => print('add successfly'))
         .catchError((e) => print('failded to set: $e'));
   }
