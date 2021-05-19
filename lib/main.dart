@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:snkrdunk_clone/login.dart';
 import 'package:snkrdunk_clone/screens/market.dart';
 import 'package:snkrdunk_clone/screens/my_page/menu/menu.dart';
+import 'package:snkrdunk_clone/screens/my_page/menu/profile/profile.dart';
 import 'package:snkrdunk_clone/screens/my_page/my_page.dart';
 import 'package:snkrdunk_clone/services/authentication_service.dart';
 import 'package:snkrdunk_clone/sign_up.dart';
@@ -41,6 +42,7 @@ class MyApp extends StatelessWidget {
           '/menu': (context) => Menu(),
           '/sign_up': (context) => SignUp(),
           '/login': (context) => Login(),
+          '/profile': (context) => Profile(),
         },
       ),
     );
