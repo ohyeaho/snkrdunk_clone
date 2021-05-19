@@ -5,11 +5,9 @@ import 'package:snkrdunk_clone/services/authentication_service.dart';
 import 'package:snkrdunk_clone/services/cloud_firebase.dart';
 
 class SignUp extends StatelessWidget {
-  final TextEditingController nameController = TextEditingController();
+  final TextEditingController userNameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-
-  // String name = '';
 
   void _showErrorDialog(BuildContext context) {
     showDialog(
@@ -99,7 +97,7 @@ class SignUp extends StatelessWidget {
                   fontSize: 20,
                 ),
                 textAlign: TextAlign.left,
-                controller: nameController,
+                controller: userNameController,
                 decoration: InputDecoration(
                   labelText: 'ユーザー名',
                   border: OutlineInputBorder(
@@ -188,7 +186,7 @@ class SignUp extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: () {
                   context.read<AuthenticationService>().signUp(
-                        name: nameController.text.trim(),
+                        userName: userNameController.text.trim(),
                         email: emailController.text.trim(),
                         password: passwordController.text.trim(),
                       );
@@ -196,7 +194,7 @@ class SignUp extends StatelessWidget {
                     if (user != null) {
                       Navigator.pushReplacementNamed(context, "/menu");
                       UserManage().setUserAccount(
-                          name: nameController.text.trim(),
+                          userName: userNameController.text.trim(),
                           email: emailController.text.trim(),
                           password: passwordController.text.trim());
                     } else {
