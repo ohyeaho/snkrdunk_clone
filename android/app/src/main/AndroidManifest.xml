@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.example.snkrdunk_clone">
    <application
-        android:label="snkrdunk_clone"
+        android:label="SNKRDUNK"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
