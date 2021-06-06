@@ -8,6 +8,7 @@ import 'package:snkrdunk_clone/screens/market.dart';
 import 'package:snkrdunk_clone/screens/my_page/menu/menu.dart';
 import 'package:snkrdunk_clone/screens/my_page/menu/profile/profile.dart';
 import 'package:snkrdunk_clone/screens/my_page/my_page.dart';
+import 'package:snkrdunk_clone/screens/search_page.dart';
 import 'package:snkrdunk_clone/services/authentication_service.dart';
 import 'package:snkrdunk_clone/sign_up.dart';
 
@@ -45,6 +46,7 @@ class MyApp extends StatelessWidget {
           '/login': (context) => Login(),
           '/profile': (context) => Profile(),
           '/home': (context) => HomePage(),
+          '/search_page': (context) => SearchPage(),
         },
       ),
     );

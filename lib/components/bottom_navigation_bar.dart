@@ -10,6 +10,7 @@ import 'package:snkrdunk_clone/screens/my_page/menu/menu.dart';
 import 'package:snkrdunk_clone/screens/my_page/menu/profile/profile.dart';
 import 'package:snkrdunk_clone/screens/my_page/my_page.dart';
 import 'package:snkrdunk_clone/screens/post.dart';
+import 'package:snkrdunk_clone/screens/search_page.dart';
 import 'package:snkrdunk_clone/sign_up.dart';
 
 final appRoutes = {
@@ -20,6 +21,7 @@ final appRoutes = {
   '/login': (context) => Login(),
   '/profile': (context) => Profile(),
   '/home': (context) => HomePage(),
+  '/search_page': (context) => SearchPage(),
 };
 
 class Home extends StatelessWidget {
