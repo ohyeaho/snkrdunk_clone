@@ -37,7 +37,10 @@ class Home extends StatelessWidget {
             label: 'メディア',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.add_box_outlined),
+            icon: Icon(
+              Icons.add_box_outlined,
+              size: 40,
+            ),
           ),
           BottomNavigationBarItem(
             icon: FaIcon(FontAwesomeIcons.heart),
@@ -48,6 +51,7 @@ class Home extends StatelessWidget {
             label: 'マイページ',
           ),
         ],
+        activeColor: Colors.black,
       ),
       tabBuilder: (context, index) {
         return CupertinoTabView(
