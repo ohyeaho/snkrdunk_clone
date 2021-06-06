@@ -31,7 +31,9 @@ class Market extends StatelessWidget {
                 ),
               ),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/search_page');
+            },
           ),
         ),
         actions: [
