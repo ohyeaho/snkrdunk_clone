@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:snkrdunk_clone/home.dart';
 import 'package:snkrdunk_clone/login.dart';
 import 'package:snkrdunk_clone/screens/market.dart';
 import 'package:snkrdunk_clone/screens/my_page/menu/menu.dart';
@@ -10,7 +11,7 @@ import 'package:snkrdunk_clone/screens/my_page/my_page.dart';
 import 'package:snkrdunk_clone/services/authentication_service.dart';
 import 'package:snkrdunk_clone/sign_up.dart';
 
-import 'home.dart';
+import 'components/bottom_navigation_bar.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -43,6 +44,7 @@ class MyApp extends StatelessWidget {
           '/sign_up': (context) => SignUp(),
           '/login': (context) => Login(),
           '/profile': (context) => Profile(),
+          '/home': (context) => HomePage(),
         },
       ),
     );
