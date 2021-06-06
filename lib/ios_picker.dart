@@ -39,7 +39,7 @@ class introduce extends State<IosPicker> {
         Container(
           child: CupertinoButton(
             child: OutlinedButton(
-              child: Text("${_initialSize}"),
+              child: Text("$_initialSize"),
               style: OutlinedButton.styleFrom(
                 primary: Colors.black,
               ),

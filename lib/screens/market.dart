@@ -25,6 +25,11 @@ class Market extends StatelessWidget {
             ),
             style: ElevatedButton.styleFrom(
               onPrimary: Colors.grey,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(30),
+                ),
+              ),
             ),
             onPressed: () {},
           ),
@@ -34,7 +39,7 @@ class Market extends StatelessWidget {
             children: [
               IconButton(
                 onPressed: () {
-                  //todo
+                  Navigator.pushNamed(context, '/home');
                 },
                 icon: Icon(
                   Icons.notifications_none,
