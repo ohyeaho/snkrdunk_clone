@@ -180,6 +180,8 @@ class Profile extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 10),
+              Divider(color: Colors.black12),
+              SizedBox(height: 30),
             ],
           ),
         ),
