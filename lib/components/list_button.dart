@@ -10,9 +10,7 @@ class ListButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        border: Border(
-          bottom: BorderSide(color: Colors.grey),
-        ),
+        border: Border(bottom: BorderSide(color: Colors.grey)),
       ),
       child: ListTile(
           title: Text(listText),
