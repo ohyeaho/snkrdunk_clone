@@ -5,7 +5,7 @@ import 'package:snkrdunk_clone/components/list_header.dart';
 class Menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<Widget> listTiles = <Widget>[
+    List<Widget> menuList = <Widget>[
       ListHeader(listHeaderTitle: 'アカウント'),
       ListButton(
         listText: 'プロフィール',
@@ -215,7 +215,7 @@ class Menu extends StatelessWidget {
           ),
         ),
       ),
-      body: ListView(children: listTiles),
+      body: ListView(children: menuList),
     );
   }
 }

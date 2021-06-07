@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class MyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<Widget> listTiles = <Widget>[
+    List<Widget> myPageList = <Widget>[
       Container(
         decoration: BoxDecoration(
           border: Border(bottom: BorderSide(color: Colors.grey)),
@@ -315,7 +315,7 @@ class MyPage extends StatelessWidget {
           )
         ],
       ),
-      body: ListView(children: listTiles),
+      body: ListView(children: myPageList),
     );
   }
 }
