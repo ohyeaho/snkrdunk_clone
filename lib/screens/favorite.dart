@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Favorite extends StatelessWidget {
+  List<String> favoriteItem = [];
+
   @override
   Widget build(BuildContext context) {
-    List<Widget> favoriteList = <Widget>[];
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -41,7 +41,16 @@ class Favorite extends StatelessWidget {
           )
         ],
       ),
-      body: ListView(children: favoriteList),
+      body: ListView.builder(
+        itemCount: favoriteItem.length,
+        itemBuilder: (context, index) {
+          return Container(
+            child: Text(
+              favoriteItem[index],
+            ),
+          );
+        },
+      ),
     );
   }
 }
