@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:snkrdunk_clone/home.dart';
 import 'package:snkrdunk_clone/login.dart';
 import 'package:snkrdunk_clone/screens/favorite.dart';
@@ -45,7 +44,7 @@ class Home extends StatelessWidget {
             ),
           ),
           BottomNavigationBarItem(
-            icon: FaIcon(FontAwesomeIcons.heart),
+            icon: Icon(Icons.favorite_border_rounded),
             label: 'お気に入り',
           ),
           BottomNavigationBarItem(
