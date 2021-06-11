@@ -103,18 +103,19 @@ class MyPage extends StatelessWidget {
                   border: Border(right: BorderSide(color: Colors.grey)),
                 ),
                 child: TextButton(
-                    style: TextButton.styleFrom(
-                      primary: Colors.grey,
-                    ),
-                    onPressed: () {
-                      //todo: ボタン処理
-                    },
-                    child: Column(
-                      children: [
-                        Text('0'),
-                        Text('取引中'),
-                      ],
-                    )),
+                  style: TextButton.styleFrom(
+                    primary: Colors.grey,
+                  ),
+                  onPressed: () {
+                    //todo: ボタン処理
+                  },
+                  child: Column(
+                    children: [
+                      Text('0'),
+                      Text('取引中'),
+                    ],
+                  ),
+                ),
               ),
             ),
             Expanded(
@@ -123,18 +124,19 @@ class MyPage extends StatelessWidget {
                   border: Border(right: BorderSide(color: Colors.grey)),
                 ),
                 child: TextButton(
-                    style: TextButton.styleFrom(
-                      primary: Colors.grey,
-                    ),
-                    onPressed: () {
-                      //todo: ボタン処理
-                    },
-                    child: Column(
-                      children: [
-                        Text('0'),
-                        Text('オファー'),
-                      ],
-                    )),
+                  style: TextButton.styleFrom(
+                    primary: Colors.grey,
+                  ),
+                  onPressed: () {
+                    //todo: ボタン処理
+                  },
+                  child: Column(
+                    children: [
+                      Text('0'),
+                      Text('オファー'),
+                    ],
+                  ),
+                ),
               ),
             ),
             Expanded(
@@ -143,35 +145,37 @@ class MyPage extends StatelessWidget {
                   border: Border(right: BorderSide(color: Colors.grey)),
                 ),
                 child: TextButton(
-                    style: TextButton.styleFrom(
-                      primary: Colors.grey,
-                    ),
-                    onPressed: () {
-                      //todo: ボタン処理
-                    },
-                    child: Column(
-                      children: [
-                        Text('0'),
-                        Text('出品中'),
-                      ],
-                    )),
+                  style: TextButton.styleFrom(
+                    primary: Colors.grey,
+                  ),
+                  onPressed: () {
+                    //todo: ボタン処理
+                  },
+                  child: Column(
+                    children: [
+                      Text('0'),
+                      Text('出品中'),
+                    ],
+                  ),
+                ),
               ),
             ),
             Expanded(
               child: Container(
                 child: TextButton(
-                    style: TextButton.styleFrom(
-                      primary: Colors.grey,
-                    ),
-                    onPressed: () {
-                      //todo: ボタン処理
-                    },
-                    child: Column(
-                      children: [
-                        Text('0'),
-                        Text('取引済み'),
-                      ],
-                    )),
+                  style: TextButton.styleFrom(
+                    primary: Colors.grey,
+                  ),
+                  onPressed: () {
+                    //todo: ボタン処理
+                  },
+                  child: Column(
+                    children: [
+                      Text('0'),
+                      Text('取引済み'),
+                    ],
+                  ),
+                ),
               ),
             ),
           ],
