@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:snkrdunk_clone/home.dart';
 import 'package:snkrdunk_clone/login.dart';
 import 'package:snkrdunk_clone/screens/favorite.dart';
@@ -10,6 +9,7 @@ import 'package:snkrdunk_clone/screens/my_page/menu/menu.dart';
 import 'package:snkrdunk_clone/screens/my_page/menu/profile/profile.dart';
 import 'package:snkrdunk_clone/screens/my_page/my_page.dart';
 import 'package:snkrdunk_clone/screens/post.dart';
+import 'package:snkrdunk_clone/screens/search_page.dart';
 import 'package:snkrdunk_clone/sign_up.dart';
 
 final appRoutes = {
@@ -20,6 +20,7 @@ final appRoutes = {
   '/login': (context) => Login(),
   '/profile': (context) => Profile(),
   '/home': (context) => HomePage(),
+  '/search_page': (context) => SearchPage(),
 };
 
 class Home extends StatelessWidget {
@@ -43,7 +44,7 @@ class Home extends StatelessWidget {
             ),
           ),
           BottomNavigationBarItem(
-            icon: FaIcon(FontAwesomeIcons.heart),
+            icon: Icon(Icons.favorite_border_rounded),
             label: 'お気に入り',
           ),
           BottomNavigationBarItem(
