@@ -12,7 +12,7 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     double width = size.width;
-    double height = size.height;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
