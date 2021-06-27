@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:snkrdunk_clone/components/grey_space.dart';
 
 class MarketSneaker extends StatelessWidget {
   @override
@@ -40,7 +39,7 @@ class MarketSneaker extends StatelessWidget {
                       ),
                       Icon(
                         Icons.ice_skating,
-                        size: 100,
+                        size: 80,
                       ),
                       Text('¥00000')
                     ],
@@ -61,7 +60,7 @@ class MarketSneaker extends StatelessWidget {
                       Icon(Icons.looks_two),
                       Icon(
                         Icons.ice_skating,
-                        size: 100,
+                        size: 80,
                       ),
                       Text('¥00000')
                     ],
@@ -91,7 +90,7 @@ class MarketSneaker extends StatelessWidget {
                       ),
                       Icon(
                         Icons.ice_skating,
-                        size: 100,
+                        size: 80,
                       ),
                       Text('¥00000')
                     ],
@@ -115,7 +114,7 @@ class MarketSneaker extends StatelessWidget {
                       ),
                       Icon(
                         Icons.ice_skating,
-                        size: 100,
+                        size: 80,
                       ),
                       Text('¥00000')
                     ],
@@ -283,6 +282,9 @@ class MarketSneaker extends StatelessWidget {
         Container(
           width: size.width,
           height: height * 0.09,
+          decoration: BoxDecoration(
+            border: Border(bottom: BorderSide(color: Colors.grey)),
+          ),
           child: Padding(
             padding: const EdgeInsets.only(
               left: 20,
@@ -309,7 +311,15 @@ class MarketSneaker extends StatelessWidget {
             ),
           ),
         ),
-        GreySpace(),
+        SizedBox(
+          height: 15,
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border(bottom: BorderSide(color: Colors.grey)),
+              color: Colors.black12,
+            ),
+          ),
+        ),
         Padding(
           padding: const EdgeInsets.all(15.0),
           child: Container(
@@ -523,6 +533,9 @@ class MarketSneaker extends StatelessWidget {
         Container(
           width: size.width,
           height: height * 0.09,
+          decoration: BoxDecoration(
+            border: Border(bottom: BorderSide(color: Colors.grey)),
+          ),
           child: Padding(
             padding: const EdgeInsets.only(
               left: 20,
@@ -549,7 +562,15 @@ class MarketSneaker extends StatelessWidget {
             ),
           ),
         ),
-        GreySpace(),
+        SizedBox(
+          height: 15,
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border(bottom: BorderSide(color: Colors.grey)),
+              color: Colors.black12,
+            ),
+          ),
+        ),
         Padding(
           padding: const EdgeInsets.all(15.0),
           child: Container(
@@ -763,6 +784,9 @@ class MarketSneaker extends StatelessWidget {
         Container(
           width: size.width,
           height: height * 0.09,
+          decoration: BoxDecoration(
+            border: Border(bottom: BorderSide(color: Colors.grey)),
+          ),
           child: Padding(
             padding: const EdgeInsets.only(
               left: 20,
@@ -789,7 +813,15 @@ class MarketSneaker extends StatelessWidget {
             ),
           ),
         ),
-        GreySpace(),
+        SizedBox(
+          height: 15,
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border(bottom: BorderSide(color: Colors.grey)),
+              color: Colors.black12,
+            ),
+          ),
+        ),
         Padding(
           padding: const EdgeInsets.all(15.0),
           child: Container(
@@ -1003,6 +1035,9 @@ class MarketSneaker extends StatelessWidget {
         Container(
           width: size.width,
           height: height * 0.09,
+          decoration: BoxDecoration(
+            border: Border(bottom: BorderSide(color: Colors.grey)),
+          ),
           child: Padding(
             padding: const EdgeInsets.only(
               left: 20,
@@ -1029,7 +1064,15 @@ class MarketSneaker extends StatelessWidget {
             ),
           ),
         ),
-        GreySpace(),
+        SizedBox(
+          height: 15,
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border(bottom: BorderSide(color: Colors.grey)),
+              color: Colors.black12,
+            ),
+          ),
+        ),
         Padding(
           padding: const EdgeInsets.all(15.0),
           child: Container(
@@ -1243,6 +1286,9 @@ class MarketSneaker extends StatelessWidget {
         Container(
           width: size.width,
           height: height * 0.09,
+          decoration: BoxDecoration(
+            border: Border(bottom: BorderSide(color: Colors.grey)),
+          ),
           child: Padding(
             padding: const EdgeInsets.only(
               left: 20,
@@ -1269,7 +1315,15 @@ class MarketSneaker extends StatelessWidget {
             ),
           ),
         ),
-        GreySpace(),
+        SizedBox(
+          height: 15,
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border(bottom: BorderSide(color: Colors.grey)),
+              color: Colors.black12,
+            ),
+          ),
+        ),
         Padding(
           padding: const EdgeInsets.all(15.0),
           child: Container(
@@ -1483,6 +1537,9 @@ class MarketSneaker extends StatelessWidget {
         Container(
           width: size.width,
           height: height * 0.09,
+          decoration: BoxDecoration(
+            border: Border(bottom: BorderSide(color: Colors.grey)),
+          ),
           child: Padding(
             padding: const EdgeInsets.only(
               left: 20,
@@ -1509,7 +1566,15 @@ class MarketSneaker extends StatelessWidget {
             ),
           ),
         ),
-        GreySpace(),
+        SizedBox(
+          height: 15,
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border(bottom: BorderSide(color: Colors.grey)),
+              color: Colors.black12,
+            ),
+          ),
+        ),
         Padding(
           padding: const EdgeInsets.all(15.0),
           child: Container(
@@ -1723,6 +1788,9 @@ class MarketSneaker extends StatelessWidget {
         Container(
           width: size.width,
           height: height * 0.09,
+          decoration: BoxDecoration(
+            border: Border(bottom: BorderSide(color: Colors.grey)),
+          ),
           child: Padding(
             padding: const EdgeInsets.only(
               left: 20,
@@ -1749,7 +1817,15 @@ class MarketSneaker extends StatelessWidget {
             ),
           ),
         ),
-        GreySpace(),
+        SizedBox(
+          height: 15,
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border(bottom: BorderSide(color: Colors.grey)),
+              color: Colors.black12,
+            ),
+          ),
+        ),
         Padding(
           padding: const EdgeInsets.all(15.0),
           child: Container(
