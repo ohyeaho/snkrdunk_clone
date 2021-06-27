@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Favorite extends StatelessWidget {
-  List<String> favoriteItem = [];
+  final List<String> favoriteItem = [];
 
   @override
   Widget build(BuildContext context) {
