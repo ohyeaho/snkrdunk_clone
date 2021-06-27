@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:snkrdunk_clone/components/grey_space.dart';
 
 class MyPage extends StatelessWidget {
   @override
@@ -43,9 +44,6 @@ class MyPage extends StatelessWidget {
         ),
       ),
       Container(
-        decoration: BoxDecoration(
-          border: Border(bottom: BorderSide(color: Colors.grey)),
-        ),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(
@@ -73,15 +71,7 @@ class MyPage extends StatelessWidget {
           ),
         ),
       ),
-      SizedBox(
-        height: 15,
-        child: Container(
-          decoration: BoxDecoration(
-            border: Border(bottom: BorderSide(color: Colors.grey)),
-            color: Colors.black12,
-          ),
-        ),
-      ),
+      GreySpace(),
       Container(
         decoration: BoxDecoration(
           border: Border(bottom: BorderSide(color: Colors.grey)),
@@ -209,7 +199,9 @@ class MyPage extends StatelessWidget {
       ),
       Container(
         decoration: BoxDecoration(
-          border: Border(bottom: BorderSide(color: Colors.grey)),
+          border: Border(
+              top: BorderSide(color: Colors.grey),
+              bottom: BorderSide(color: Colors.grey)),
         ),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -217,9 +209,6 @@ class MyPage extends StatelessWidget {
         ),
       ),
       Container(
-        decoration: BoxDecoration(
-          border: Border(bottom: BorderSide(color: Colors.grey)),
-        ),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: OutlinedButton(
@@ -236,33 +225,14 @@ class MyPage extends StatelessWidget {
           ),
         ),
       ),
-      SizedBox(
-        height: 15,
-        child: Container(
-          decoration: BoxDecoration(
-            border: Border(bottom: BorderSide(color: Colors.grey)),
-            color: Colors.black12,
-          ),
-        ),
-      ),
+      GreySpace(),
       Container(
-        decoration: BoxDecoration(
-          border: Border(bottom: BorderSide(color: Colors.grey)),
-        ),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Text('お気に入り'),
         ),
       ),
-      SizedBox(
-        height: 15,
-        child: Container(
-          decoration: BoxDecoration(
-            border: Border(bottom: BorderSide(color: Colors.grey)),
-            color: Colors.black12,
-          ),
-        ),
-      ),
+      GreySpace(),
       Container(
         decoration: BoxDecoration(
           border: Border(bottom: BorderSide(color: Colors.grey)),

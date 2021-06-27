@@ -2,21 +2,23 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class IosPicker extends StatefulWidget {
-  String initialValue;
+  final String initialValue;
+
+  const IosPicker({Key key, this.initialValue}) : super(key: key);
   @override
-  introduce createState() => introduce();
+  Introduce createState() => Introduce();
 }
 
-class introduce extends State<IosPicker> {
-  String m_inputValue = "";
+class Introduce extends State<IosPicker> {
+  String inputValue = "";
 
   var selectedIndex = 0;
   String initial;
-  introduce({this.initial});
+  Introduce({this.initial});
 
   @override
   Widget build(BuildContext context) {
-    return _IosPicker();
+    return iosPicker();
   }
 
   String _selectedSize = "選択してください";
@@ -28,7 +30,7 @@ class introduce extends State<IosPicker> {
     );
   }
 
-  Widget _IosPicker() {
+  Widget iosPicker() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
@@ -38,6 +40,7 @@ class introduce extends State<IosPicker> {
         ),
         Container(
           child: CupertinoButton(
+            onPressed: () {},
             child: OutlinedButton(
               child: Text("$_initialSize"),
               style: OutlinedButton.styleFrom(
@@ -74,8 +77,7 @@ class introduce extends State<IosPicker> {
                             child: CupertinoPicker(
                               itemExtent: 40,
                               children: sizeList.map(_pickerAge).toList(),
-                              onSelectedItemChanged:
-                                  _onSelectedItemChanged_size,
+                              onSelectedItemChanged: _onSelectedItemChangedSize,
                             ),
                           )
                         ],
@@ -91,7 +93,7 @@ class introduce extends State<IosPicker> {
     );
   }
 
-  void _onSelectedItemChanged_size(int index) {
+  void _onSelectedItemChangedSize(int index) {
     setState(() {
       _selectedSize = sizeList[index];
     });
