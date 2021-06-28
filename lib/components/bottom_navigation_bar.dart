@@ -5,7 +5,7 @@ import 'package:snkrdunk_clone/home.dart';
 import 'package:snkrdunk_clone/login.dart';
 import 'package:snkrdunk_clone/screens/favorite.dart';
 import 'package:snkrdunk_clone/screens/market/market.dart';
-import 'package:snkrdunk_clone/screens/media.dart';
+import 'package:snkrdunk_clone/screens/media/media.dart';
 import 'package:snkrdunk_clone/screens/my_page/menu/menu.dart';
 import 'package:snkrdunk_clone/screens/my_page/menu/profile/profile.dart';
 import 'package:snkrdunk_clone/screens/my_page/my_page.dart';

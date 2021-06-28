@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:snkrdunk_clone/components/market_apparel.dart';
-import 'package:snkrdunk_clone/components/market_sneaker.dart';
 import 'package:snkrdunk_clone/screens/market/market.model.dart';
+import 'package:snkrdunk_clone/screens/market/market_apparel.dart';
+import 'package:snkrdunk_clone/screens/market/market_sneaker.dart';
 
 class Market extends StatelessWidget {
   final Map<int, Widget> icons = <int, Widget>{
