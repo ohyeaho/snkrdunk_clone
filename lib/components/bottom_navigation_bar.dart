@@ -2,15 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:snkrdunk_clone/home.dart';
-import 'package:snkrdunk_clone/login.dart';
 import 'package:snkrdunk_clone/screens/favorite.dart';
+import 'package:snkrdunk_clone/screens/login_signup/login.dart';
+import 'package:snkrdunk_clone/screens/login_signup/sign_up.dart';
 import 'package:snkrdunk_clone/screens/market/market.dart';
 import 'package:snkrdunk_clone/screens/media/media.dart';
 import 'package:snkrdunk_clone/screens/my_page/menu/menu.dart';
 import 'package:snkrdunk_clone/screens/my_page/menu/profile/profile.dart';
 import 'package:snkrdunk_clone/screens/my_page/my_page.dart';
 import 'package:snkrdunk_clone/screens/search_page.dart';
-import 'package:snkrdunk_clone/sign_up.dart';
 
 final appRoutes = {
   '/market': (context) => Market(),
@@ -28,118 +28,119 @@ class Home extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
     double height = size.height;
     await showModalBottomSheet(
-        backgroundColor: Colors.transparent,
-        context: context,
-        builder: (BuildContext context) {
-          return Container(
-            height: height * 0.5,
-            decoration: BoxDecoration(
-                color: Colors.grey.shade200,
-                borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(10.0),
-                    topLeft: Radius.circular(10.0))),
-            child: Column(
-              // mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 15, bottom: 10),
-                  child: Center(
-                    child: Text(
-                      'スニーカーの出品・アパレルの出品\n質問や写真を投稿することができます。',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
+      backgroundColor: Colors.transparent,
+      context: context,
+      builder: (BuildContext context) {
+        return Container(
+          height: height * 0.5,
+          decoration: BoxDecoration(
+              color: Colors.grey.shade200,
+              borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(10.0),
+                  topLeft: Radius.circular(10.0))),
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 15, bottom: 10),
+                child: Center(
+                  child: Text(
+                    'スニーカーの出品・アパレルの出品\n質問や写真を投稿することができます。',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 15.0, vertical: 2),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        //todo: ボタン処理
-                      },
-                      style: ElevatedButton.styleFrom(
-                        primary: Colors.white,
-                      ),
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.ice_skating,
+              ),
+              Expanded(
+                child: Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 15.0, vertical: 2),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      //todo: ボタン処理
+                    },
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.white,
+                    ),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.ice_skating,
+                          color: Colors.black,
+                        ),
+                        Text(
+                          'スニーカーを出品する',
+                          style: TextStyle(
                             color: Colors.black,
                           ),
-                          Text(
-                            'スニーカーを出品する',
-                            style: TextStyle(
-                              color: Colors.black,
-                            ),
-                          ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 15.0, vertical: 2),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        //todo: ボタン処理
-                      },
-                      style: ElevatedButton.styleFrom(
-                        primary: Colors.white,
-                      ),
-                      child: Row(
-                        children: [
-                          FaIcon(
-                            FontAwesomeIcons.tshirt,
+              ),
+              Expanded(
+                child: Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 15.0, vertical: 2),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      //todo: ボタン処理
+                    },
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.white,
+                    ),
+                    child: Row(
+                      children: [
+                        FaIcon(
+                          FontAwesomeIcons.tshirt,
+                          color: Colors.black,
+                        ),
+                        Text(
+                          'アパレルを出品する',
+                          style: TextStyle(
                             color: Colors.black,
                           ),
-                          Text(
-                            'アパレルを出品する',
-                            style: TextStyle(
-                              color: Colors.black,
-                            ),
-                          ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 15.0, vertical: 2),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        //todo: ボタン処理
-                      },
-                      style: ElevatedButton.styleFrom(
-                        primary: Colors.white,
-                      ),
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.photo_library_outlined,
+              ),
+              Expanded(
+                child: Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 15.0, vertical: 2),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      //todo: ボタン処理
+                    },
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.white,
+                    ),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.photo_library_outlined,
+                          color: Colors.black,
+                        ),
+                        Text(
+                          '写真や文章を投稿する',
+                          style: TextStyle(
                             color: Colors.black,
                           ),
-                          Text(
-                            '写真や文章を投稿する',
-                            style: TextStyle(
-                              color: Colors.black,
-                            ),
-                          ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-                SizedBox(height: height * 0.08)
-              ],
-            ),
-          );
-        });
+              ),
+              SizedBox(height: height * 0.08)
+            ],
+          ),
+        );
+      },
+    );
   }
 
   @override

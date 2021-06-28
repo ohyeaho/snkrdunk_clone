@@ -3,14 +3,14 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:snkrdunk_clone/home.dart';
-import 'package:snkrdunk_clone/login.dart';
+import 'package:snkrdunk_clone/screens/login_signup/login.dart';
+import 'package:snkrdunk_clone/screens/login_signup/sign_up.dart';
 import 'package:snkrdunk_clone/screens/market/market.dart';
 import 'package:snkrdunk_clone/screens/my_page/menu/menu.dart';
 import 'package:snkrdunk_clone/screens/my_page/menu/profile/profile.dart';
 import 'package:snkrdunk_clone/screens/my_page/my_page.dart';
 import 'package:snkrdunk_clone/screens/search_page.dart';
 import 'package:snkrdunk_clone/services/authentication_service.dart';
-import 'package:snkrdunk_clone/sign_up.dart';
 
 import 'components/bottom_navigation_bar.dart';
 
