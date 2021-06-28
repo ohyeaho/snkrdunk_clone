@@ -38,10 +38,8 @@ class MarketSneaker extends StatelessWidget {
                         Icons.looks_one,
                         color: Colors.amber,
                       ),
-                      Icon(
-                        Icons.ice_skating,
-                        size: 100,
-                      ),
+                      Image.network(
+                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
                       Text('¥00000')
                     ],
                   ),
@@ -59,10 +57,8 @@ class MarketSneaker extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Icon(Icons.looks_two),
-                      Icon(
-                        Icons.ice_skating,
-                        size: 100,
-                      ),
+                      Image.network(
+                          'https://cdn.snkrdunk.com/uploads/media/20201202011818-0.jpeg'),
                       Text('¥00000')
                     ],
                   ),
@@ -89,10 +85,8 @@ class MarketSneaker extends StatelessWidget {
                         Icons.looks_3,
                         color: Colors.brown,
                       ),
-                      Icon(
-                        Icons.ice_skating,
-                        size: 100,
-                      ),
+                      Image.network(
+                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-001.jpg'),
                       Text('¥00000')
                     ],
                   ),
@@ -113,10 +107,8 @@ class MarketSneaker extends StatelessWidget {
                         Icons.looks_4,
                         color: Colors.black,
                       ),
-                      Icon(
-                        Icons.ice_skating,
-                        size: 100,
-                      ),
+                      Image.network(
+                          'https://cdn.snkrdunk.com/uploads/media/20190729091816-3.jpeg'),
                       Text('¥00000')
                     ],
                   ),
@@ -143,10 +135,8 @@ class MarketSneaker extends StatelessWidget {
                         Icons.looks_5,
                         color: Colors.black,
                       ),
-                      Icon(
-                        Icons.ice_skating,
-                        size: 80,
-                      ),
+                      Image.network(
+                          'https://cdn.snkrdunk.com/uploads/media/20190729091816-2.jpeg'),
                       Text('¥00000')
                     ],
                   ),
@@ -167,10 +157,8 @@ class MarketSneaker extends StatelessWidget {
                         Icons.looks_6,
                         color: Colors.black,
                       ),
-                      Icon(
-                        Icons.ice_skating,
-                        size: 80,
-                      ),
+                      Image.network(
+                          'https://cdn.snkrdunk.com/uploads/sneaker-images/840606-192.jpg'),
                       Text('¥00000')
                     ],
                   ),
@@ -191,10 +179,8 @@ class MarketSneaker extends StatelessWidget {
                         Icons.filter_7,
                         color: Colors.black,
                       ),
-                      Icon(
-                        Icons.ice_skating,
-                        size: 80,
-                      ),
+                      Image.network(
+                          'https://cdn.snkrdunk.com/uploads/media/20200925015300-1.jpeg'),
                       Text('¥00000')
                     ],
                   ),
@@ -221,10 +207,8 @@ class MarketSneaker extends StatelessWidget {
                         Icons.filter_8,
                         color: Colors.black,
                       ),
-                      Icon(
-                        Icons.ice_skating,
-                        size: 80,
-                      ),
+                      Image.network(
+                          'https://cdn.snkrdunk.com/uploads/media/20200824014804-1.jpeg'),
                       Text('¥00000')
                     ],
                   ),
@@ -245,10 +229,8 @@ class MarketSneaker extends StatelessWidget {
                         Icons.filter_9,
                         color: Colors.black,
                       ),
-                      Icon(
-                        Icons.ice_skating,
-                        size: 80,
-                      ),
+                      Image.network(
+                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-125.jpg'),
                       Text('¥00000')
                     ],
                   ),
@@ -268,10 +250,8 @@ class MarketSneaker extends StatelessWidget {
                       Text(
                         '10',
                       ),
-                      Icon(
-                        Icons.ice_skating,
-                        size: 80,
-                      ),
+                      Image.network(
+                          'https://cdn.snkrdunk.com/uploads/media/20200510020035-1.jpeg'),
                       Text('¥00000')
                     ],
                   ),

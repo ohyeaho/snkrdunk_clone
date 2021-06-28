@@ -73,40 +73,43 @@ class Market extends StatelessWidget {
         ),
         body: Consumer<MarketModel>(
           builder: (context, model, child) {
-            return ListView(children: [
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: CupertinoSlidingSegmentedControl(
-                  groupValue: model.segmentedControlValue,
-                  backgroundColor: Colors.black12,
-                  children: <int, Widget>{
-                    0: Container(
-                      height: 40,
-                      child: Center(
-                        child: Text(
-                          'スニーカー',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
+            return Container(
+              color: Colors.white,
+              child: ListView(children: [
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: CupertinoSlidingSegmentedControl(
+                    groupValue: model.segmentedControlValue,
+                    backgroundColor: Colors.black12,
+                    children: <int, Widget>{
+                      0: Container(
+                        height: 40,
+                        child: Center(
+                          child: Text(
+                            'スニーカー',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                    1: Text(
-                      'アパレル',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+                      1: Text(
+                        'アパレル',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                  },
-                  onValueChanged: (int value) {
-                    model.changeValue(value);
-                  },
+                    },
+                    onValueChanged: (int value) {
+                      model.changeValue(value);
+                    },
+                  ),
                 ),
-              ),
-              Container(
-                child: icons[model.segmentedControlValue],
-              ),
-            ]);
+                Container(
+                  child: icons[model.segmentedControlValue],
+                ),
+              ]),
+            );
           },
         ),
       ),
