@@ -1,10 +1,14 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:snkrdunk_clone/screens/post/new_post_tab/sentence_photo.dart';
+import 'package:snkrdunk_clone/screens/post/new_post_tab/sneaker_review.dart';
 
 class NewPost extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 1,
         leading: TextButton(
           child: Text(
             '完了',
@@ -25,7 +29,34 @@ class NewPost extends StatelessWidget {
           ),
         ),
       ),
-      body: Text('新規投稿'),
+      body: DefaultTabController(
+        length: 2,
+        child: Column(
+          children: [
+            TabBar(
+              indicatorColor: Colors.black,
+              labelColor: Colors.black,
+              tabs: [
+                Tab(
+                  child: Text('文章や写真'),
+                ),
+                Tab(
+                  child: Text('スニーカーレビュー'),
+                )
+              ],
+            ),
+            Expanded(
+              child: TabBarView(
+                physics: NeverScrollableScrollPhysics(),
+                children: [
+                  SentencePhoto(),
+                  SneakerReview(),
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
     );
   }
 }

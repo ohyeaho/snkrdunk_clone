@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:snkrdunk_clone/screens/post/new_post.dart';
 
 class MediaPageNewPost extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     void onPressed(BuildContext context) async {
@@ -139,7 +140,7 @@ class MediaPageNewPost extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.orange,
         child: Icon(
-          Icons.add_box_outlined,
+          Icons.add_circle_outline,
           size: 30,
         ),
         onPressed: () => onPressed(context),
