@@ -158,8 +158,8 @@ class Home extends StatelessWidget {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.add_box_outlined,
-              size: 40,
+              Icons.add_circle_outline,
+              size: 45,
             ),
           ),
           BottomNavigationBarItem(
