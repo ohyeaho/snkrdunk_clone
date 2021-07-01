@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:snkrdunk_clone/screens/media/media_page_calendar.dart';
-import 'package:snkrdunk_clone/screens/media/media_page_latest_article.dart';
-import 'package:snkrdunk_clone/screens/media/media_page_new_post.dart';
+import 'package:snkrdunk_clone/screens/media/tab/media_page_calendar.dart';
+import 'package:snkrdunk_clone/screens/media/tab/media_page_latest_article.dart';
+import 'package:snkrdunk_clone/screens/media/tab/media_page_new_post.dart';
 
 class Media extends StatelessWidget {
   @override
