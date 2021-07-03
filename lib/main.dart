@@ -6,6 +6,8 @@ import 'package:snkrdunk_clone/home.dart';
 import 'package:snkrdunk_clone/screens/login_signup/login.dart';
 import 'package:snkrdunk_clone/screens/login_signup/sign_up.dart';
 import 'package:snkrdunk_clone/screens/market/market.dart';
+import 'package:snkrdunk_clone/screens/media/media.dart';
+import 'package:snkrdunk_clone/screens/media/tab/media_page_new_post.dart';
 import 'package:snkrdunk_clone/screens/my_page/menu/menu.dart';
 import 'package:snkrdunk_clone/screens/my_page/menu/profile/profile.dart';
 import 'package:snkrdunk_clone/screens/my_page/my_page.dart';
@@ -47,6 +49,8 @@ class MyApp extends StatelessWidget {
           '/profile': (context) => Profile(),
           '/home': (context) => HomePage(),
           '/search_page': (context) => SearchPage(),
+          '/media': (context) => Media(),
+          '/media_page_new_post': (context) => MediaPageNewPost(),
         },
       ),
     );
