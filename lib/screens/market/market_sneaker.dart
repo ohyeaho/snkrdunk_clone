@@ -86,7 +86,7 @@ class MarketSneaker extends StatelessWidget {
                         color: Colors.brown,
                       ),
                       Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-001.jpg'),
+                          'https://cdn.snkrdunk.com/uploads/media/20190729091816-3.jpeg'),
                       Text('¥00000')
                     ],
                   ),
@@ -108,7 +108,7 @@ class MarketSneaker extends StatelessWidget {
                         color: Colors.black,
                       ),
                       Image.network(
-                          'https://cdn.snkrdunk.com/uploads/media/20190729091816-3.jpeg'),
+                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-001.jpg'),
                       Text('¥00000')
                     ],
                   ),
