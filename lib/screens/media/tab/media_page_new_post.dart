@@ -1,8 +1,11 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:snkrdunk_clone/screens/post/new_post.dart';
 
 class MediaPageNewPost extends StatelessWidget {
+  final User user = FirebaseAuth.instance.currentUser;
 
   @override
   Widget build(BuildContext context) {
@@ -98,7 +101,7 @@ class MediaPageNewPost extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => NewPost(),
+                            builder: (context) => NewPost(user),
                             fullscreenDialog: true,
                           ),
                         );
@@ -131,12 +134,87 @@ class MediaPageNewPost extends StatelessWidget {
       );
     }
 
-    List<Widget> mediaPageNewPost = <Widget>[
-      Text('新着投稿'),
-    ];
+    // List<Widget> mediaPageNewPost = <Widget>[
+    //   Expanded(
+    //       child: StreamBuilder<QuerySnapshot>(
+    //     stream: FirebaseFirestore.instance
+    //         .collection('posts')
+    //         .orderBy('date')
+    //         .snapshots(),
+    //     builder: (context, snapshot) {
+    //       if (snapshot.hasData) {
+    //         final List<DocumentSnapshot> documents = snapshot.data.docs;
+    //         return ListView(
+    //           children: documents.map((document) {
+    //             return Card(
+    //               child: ListTile(
+    //                 title: Text(document['text']),
+    //                 // subtitle: Text(document['userName']),
+    //                 // trailing: document['email'] == user.email
+    //                 //     ? IconButton(
+    //                 //         onPressed: () async {
+    //                 //           await FirebaseFirestore.instance
+    //                 //               .collection('posts')
+    //                 //               .doc(document.id)
+    //                 //               .delete();
+    //                 //         },
+    //                 //         icon: Icon(Icons.delete),
+    //                 //       )
+    //                 //     : null,
+    //               ),
+    //             );
+    //           }).toList(),
+    //         );
+    //       }
+    //       return Center(
+    //         child: Text('読込中...'),
+    //       );
+    //     },
+    //   ))
+    // ];
 
     return Scaffold(
-      body: ListView(children: mediaPageNewPost),
+      body: Column(
+        children: [
+          Expanded(
+              child: StreamBuilder<QuerySnapshot>(
+            stream: FirebaseFirestore.instance
+                .collection('posts')
+                .orderBy('date')
+                .snapshots(),
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                final List<DocumentSnapshot> documents = snapshot.data.docs;
+                return ListView(
+                  children: documents.map((document) {
+                    return Card(
+                      child: ListTile(
+                        title: Text(document['text']),
+                        // subtitle: Text(document['userName']),
+                        // trailing: document['email'] == user.email
+                        //     ? IconButton(
+                        //         onPressed: () async {
+                        //           await FirebaseFirestore.instance
+                        //               .collection('posts')
+                        //               .doc(document.id)
+                        //               .delete();
+                        //         },
+                        //         icon: Icon(Icons.delete),
+                        //       )
+                        //     : null,
+                      ),
+                    );
+                  }).toList(),
+                );
+              }
+              return Center(
+                child: Text('読込中...'),
+              );
+            },
+          ))
+        ],
+      ),
+      // ListView(children: mediaPageNewPost),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.orange,
         child: Icon(

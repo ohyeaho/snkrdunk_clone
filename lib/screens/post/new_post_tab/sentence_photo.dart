@@ -1,6 +1,14 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class SentencePhoto extends StatelessWidget {
+  SentencePhoto(user);
+
+  final User user = FirebaseAuth.instance.currentUser;
+
+  final TextEditingController postTextController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     List<Widget> sentencePhoto = <Widget>[
@@ -80,6 +88,7 @@ class SentencePhoto extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextFormField(
+              controller: postTextController,
               decoration: InputDecoration(
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.zero,
@@ -178,8 +187,14 @@ class SentencePhoto extends StatelessWidget {
           ),
           child: TextButton(
             style: TextButton.styleFrom(primary: Colors.white),
-            onPressed: () {
-              //todo: ボタン処理
+            onPressed: () async {
+              final date = DateTime.now().toLocal().toIso8601String();
+              await FirebaseFirestore.instance
+                  .collection('posts')
+                  .doc()
+                  .set({'text': postTextController.text, 'date': date});
+              int count = 0;
+              Navigator.popUntil(context, (_) => count++ >= 2);
             },
             child: Text(
               '投稿する',

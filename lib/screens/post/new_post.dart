@@ -1,9 +1,14 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:snkrdunk_clone/screens/post/new_post_tab/sentence_photo.dart';
 import 'package:snkrdunk_clone/screens/post/new_post_tab/sneaker_review.dart';
 
 class NewPost extends StatelessWidget {
+  NewPost(user);
+
+  final User user = FirebaseAuth.instance.currentUser;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,7 +54,7 @@ class NewPost extends StatelessWidget {
               child: TabBarView(
                 physics: NeverScrollableScrollPhysics(),
                 children: [
-                  SentencePhoto(),
+                  SentencePhoto(user),
                   SneakerReview(),
                 ],
               ),
