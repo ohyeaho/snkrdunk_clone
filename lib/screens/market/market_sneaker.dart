@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:snkrdunk_clone/components/button_market.dart';
+import 'package:snkrdunk_clone/components/button_market_ranking.dart';
 import 'package:snkrdunk_clone/components/grey_space.dart';
 
 class MarketSneaker extends StatelessWidget {
@@ -23,46 +25,23 @@ class MarketSneaker extends StatelessWidget {
         Container(
           child: Row(
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Icon(
-                        Icons.looks_one,
-                        color: Colors.amber,
-                      ),
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarketRanking(
+                imageRanking: 'images/no_1.jpg',
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Icon(Icons.looks_two),
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/media/20201202011818-0.jpeg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarketRanking(
+                imageRanking: 'images/no_2.jpg',
+                image:
+                    'https://cdn.snkrdunk.com/uploads/media/20201202011818-0.jpeg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'アンブッシュ × ナイキ ダンク ハイ "ブラック"',
               )
             ],
           ),
@@ -70,49 +49,23 @@ class MarketSneaker extends StatelessWidget {
         Container(
           child: Row(
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Icon(
-                        Icons.looks_3,
-                        color: Colors.brown,
-                      ),
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/media/20190729091816-3.jpeg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarketRanking(
+                imageRanking: 'images/no_3.jpg',
+                image:
+                    'https://cdn.snkrdunk.com/uploads/media/20190729091816-3.jpeg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン4 "ブレッド" 2019',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Icon(
-                        Icons.looks_4,
-                        color: Colors.black,
-                      ),
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-001.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarketRanking(
+                imageRanking: 'images/no_4.jpg',
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-001.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "ブレッド (2016)"',
               )
             ],
           ),
@@ -120,71 +73,32 @@ class MarketSneaker extends StatelessWidget {
         Container(
           child: Row(
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Icon(
-                        Icons.looks_5,
-                        color: Colors.black,
-                      ),
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/media/20190729091816-2.jpeg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarketRanking(
+                imageRanking: 'images/no_5.jpg',
+                image:
+                    'https://cdn.snkrdunk.com/uploads/media/20190729091816-2.jpeg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'トラヴィス・スコット×ナイキ エアジョーダン1 レトロ ハイ OG',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Icon(
-                        Icons.looks_6,
-                        color: Colors.black,
-                      ),
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/840606-192.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarketRanking(
+                imageRanking: 'images/no_6.jpg',
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/840606-192.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン4 レトロ "ホワイト セット (2016)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Icon(
-                        Icons.filter_7,
-                        color: Colors.black,
-                      ),
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/media/20200925015300-1.jpeg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarketRanking(
+                imageRanking: 'images/no_7.jpg',
+                image:
+                    'https://cdn.snkrdunk.com/uploads/media/20200925015300-1.jpeg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'オフホワイト×ナイキ エアラバー ダンク "ブラック/ホワイトグリーン"',
               )
             ],
           ),
@@ -192,70 +106,32 @@ class MarketSneaker extends StatelessWidget {
         Container(
           child: Row(
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Icon(
-                        Icons.filter_8,
-                        color: Colors.black,
-                      ),
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/media/20200824014804-1.jpeg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarketRanking(
+                imageRanking: 'images/no_7.jpg',
+                image:
+                    'https://cdn.snkrdunk.com/uploads/media/20200824014804-1.jpeg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ユニオン × ナイキ エアジョーダン4 "GUAVA"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Icon(
-                        Icons.filter_9,
-                        color: Colors.black,
-                      ),
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-125.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarketRanking(
+                imageRanking: 'images/no_7.jpg',
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-125.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "ブラック トゥ (2016)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        '10',
-                      ),
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/media/20200510020035-1.jpeg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarketRanking(
+                imageRanking: 'images/no_7.jpg',
+                image:
+                    'https://cdn.snkrdunk.com/uploads/media/20200510020035-1.jpeg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ ダンク ロー SP "ホワイト/ユニバーシティレッド"',
               )
             ],
           ),
@@ -305,59 +181,29 @@ class MarketSneaker extends StatelessWidget {
         Container(
           child: Row(
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               )
             ],
           ),
@@ -365,59 +211,29 @@ class MarketSneaker extends StatelessWidget {
         Container(
           child: Row(
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               )
             ],
           ),
@@ -425,59 +241,29 @@ class MarketSneaker extends StatelessWidget {
         Container(
           child: Row(
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               )
             ],
           ),
@@ -527,59 +313,29 @@ class MarketSneaker extends StatelessWidget {
         Container(
           child: Row(
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               )
             ],
           ),
@@ -587,59 +343,29 @@ class MarketSneaker extends StatelessWidget {
         Container(
           child: Row(
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               )
             ],
           ),
@@ -647,59 +373,29 @@ class MarketSneaker extends StatelessWidget {
         Container(
           child: Row(
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               )
             ],
           ),
@@ -749,59 +445,29 @@ class MarketSneaker extends StatelessWidget {
         Container(
           child: Row(
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               )
             ],
           ),
@@ -809,59 +475,29 @@ class MarketSneaker extends StatelessWidget {
         Container(
           child: Row(
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               )
             ],
           ),
@@ -869,59 +505,29 @@ class MarketSneaker extends StatelessWidget {
         Container(
           child: Row(
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               )
             ],
           ),
@@ -971,59 +577,29 @@ class MarketSneaker extends StatelessWidget {
         Container(
           child: Row(
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               )
             ],
           ),
@@ -1031,59 +607,29 @@ class MarketSneaker extends StatelessWidget {
         Container(
           child: Row(
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               )
             ],
           ),
@@ -1091,59 +637,29 @@ class MarketSneaker extends StatelessWidget {
         Container(
           child: Row(
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               )
             ],
           ),
@@ -1193,59 +709,29 @@ class MarketSneaker extends StatelessWidget {
         Container(
           child: Row(
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               )
             ],
           ),
@@ -1253,59 +739,29 @@ class MarketSneaker extends StatelessWidget {
         Container(
           child: Row(
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               )
             ],
           ),
@@ -1313,59 +769,29 @@ class MarketSneaker extends StatelessWidget {
         Container(
           child: Row(
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               )
             ],
           ),
@@ -1415,59 +841,29 @@ class MarketSneaker extends StatelessWidget {
         Container(
           child: Row(
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               )
             ],
           ),
@@ -1475,59 +871,29 @@ class MarketSneaker extends StatelessWidget {
         Container(
           child: Row(
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               )
             ],
           ),
@@ -1535,59 +901,29 @@ class MarketSneaker extends StatelessWidget {
         Container(
           child: Row(
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               )
             ],
           ),
@@ -1637,59 +973,29 @@ class MarketSneaker extends StatelessWidget {
         Container(
           child: Row(
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               )
             ],
           ),
@@ -1697,59 +1003,29 @@ class MarketSneaker extends StatelessWidget {
         Container(
           child: Row(
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               )
             ],
           ),
@@ -1757,59 +1033,29 @@ class MarketSneaker extends StatelessWidget {
         Container(
           child: Row(
             children: [
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               ),
-              Expanded(
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    primary: Colors.grey,
-                  ),
-                  onPressed: () {
-                    //todo: ボタン処理
-                  },
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.network(
-                          'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg'),
-                      Text('¥00000')
-                    ],
-                  ),
-                ),
+              ButtonMarket(
+                image:
+                    'https://cdn.snkrdunk.com/uploads/sneaker-images/555088-101.jpg',
+                price: '00,000',
+                stock: '99+',
+                offer: '99+',
+                name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
               )
             ],
           ),
