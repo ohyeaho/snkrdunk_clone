@@ -51,17 +51,12 @@ class UserManage {
         .catchError((e) => print('failded to add uri: $e'));
   }
 
-  Future<void> setUserAccount(
-      {@required String userName,
-      @required String email,
-      @required String password}) {
+  Future<void> setUserAccount({@required String userName}) {
     return users
         .doc(user.uid)
         .set({
           'userName': userName,
-          'email': email,
-          'password': password,
-          'uri': ''
+          'uri': '',
         })
         .then((value) => print('add successfly'))
         .catchError((e) => print('failded to set: $e'));
