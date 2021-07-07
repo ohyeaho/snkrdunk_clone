@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:provider/provider.dart';
+import 'package:snkrdunk_clone/screens/login_signup/forget_password.dart';
 import 'package:snkrdunk_clone/services/authentication_service.dart';
 
 class Login extends StatelessWidget {
@@ -228,7 +229,10 @@ class Login extends StatelessWidget {
                 child: MaterialButton(
                   materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                   onPressed: () {
-                    //todo
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ForgetPassword()),
+                    );
                   },
                   minWidth: 0,
                   height: 0,
