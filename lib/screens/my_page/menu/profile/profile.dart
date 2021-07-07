@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
+import 'package:snkrdunk_clone/components/bottom_navigation_bar.dart';
 import 'package:snkrdunk_clone/ios_picker.dart';
 import 'package:snkrdunk_clone/services/authentication_service.dart';
 
@@ -166,7 +167,12 @@ class Profile extends StatelessWidget {
                         .authStateChanges()
                         .listen((User user) {
                       if (user == null) {
-                        Navigator.pushReplacementNamed(context, "/market");
+                        Navigator.of(context, rootNavigator: true)
+                            .pushReplacement(
+                          CupertinoPageRoute(
+                            builder: (context) => Home(),
+                          ),
+                        );
                       }
                     });
                   },
