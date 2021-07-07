@@ -193,11 +193,10 @@ class Profile extends StatelessWidget {
                                     .listen((User user) {
                                   if (user == null) {
                                     Navigator.of(context, rootNavigator: true)
-                                        .pushReplacement(
-                                      CupertinoPageRoute(
-                                        builder: (context) => Home(),
-                                      ),
-                                    );
+                                        .pushAndRemoveUntil(
+                                            CupertinoPageRoute(
+                                                builder: (context) => Home()),
+                                            (_) => false);
                                   }
                                 });
                               },
