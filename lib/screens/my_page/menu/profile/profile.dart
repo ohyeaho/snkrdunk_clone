@@ -162,19 +162,50 @@ class Profile extends StatelessWidget {
               Center(
                 child: TextButton(
                   onPressed: () {
-                    context.read<AuthenticationService>().signOut();
-                    FirebaseAuth.instance
-                        .authStateChanges()
-                        .listen((User user) {
-                      if (user == null) {
-                        Navigator.of(context, rootNavigator: true)
-                            .pushReplacement(
-                          CupertinoPageRoute(
-                            builder: (context) => Home(),
+                    showDialog(
+                      context: context,
+                      barrierDismissible: false,
+                      builder: (BuildContext dialogContext) {
+                        return CupertinoAlertDialog(
+                          title: Text(
+                            '本当にログアウトしますか？',
+                            style: TextStyle(
+                              fontWeight: FontWeight.normal,
+                              fontSize: 13,
+                            ),
                           ),
+                          actions: <Widget>[
+                            TextButton(
+                              child: Text(
+                                'キャンセル',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              onPressed: () {
+                                Navigator.of(dialogContext).pop();
+                              },
+                            ),
+                            TextButton(
+                              child: Text('OK'),
+                              onPressed: () {
+                                context.read<AuthenticationService>().signOut();
+                                FirebaseAuth.instance
+                                    .authStateChanges()
+                                    .listen((User user) {
+                                  if (user == null) {
+                                    Navigator.of(context, rootNavigator: true)
+                                        .pushReplacement(
+                                      CupertinoPageRoute(
+                                        builder: (context) => Home(),
+                                      ),
+                                    );
+                                  }
+                                });
+                              },
+                            ),
+                          ],
                         );
-                      }
-                    });
+                      },
+                    );
                   },
                   child: Text(
                     'ログアウト',
