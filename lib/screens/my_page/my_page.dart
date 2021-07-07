@@ -1,8 +1,22 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 import 'package:snkrdunk_clone/components/grey_space.dart';
+import 'package:snkrdunk_clone/screens/login_signup/sign_up.dart';
+import 'package:snkrdunk_clone/screens/news.dart';
+import 'package:snkrdunk_clone/screens/notice.dart';
 import 'package:snkrdunk_clone/screens/post/new_post.dart';
+
+class MyPageAuth extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final firebaseUser = context.watch<User>();
+    if (firebaseUser != null) {
+      return MyPage();
+    }
+    return SignUp();
+  }
+}
 
 class MyPage extends StatelessWidget {
   final User user = FirebaseAuth.instance.currentUser;
@@ -49,14 +63,17 @@ class MyPage extends StatelessWidget {
                       ),
                       child: Row(
                         children: [
-                          Icon(
-                            Icons.ice_skating,
-                            color: Colors.black,
+                          Container(
+                            height: 40,
+                            width: 50,
+                            child: Image.asset('images/sn_buy.jpg'),
                           ),
+                          SizedBox(width: 10),
                           Text(
                             'スニーカーを出品する',
                             style: TextStyle(
                               color: Colors.black,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                         ],
@@ -77,14 +94,17 @@ class MyPage extends StatelessWidget {
                       ),
                       child: Row(
                         children: [
-                          FaIcon(
-                            FontAwesomeIcons.tshirt,
-                            color: Colors.black,
+                          Container(
+                            height: 40,
+                            width: 50,
+                            child: Image.asset('images/ap_buy.jpg'),
                           ),
+                          SizedBox(width: 10),
                           Text(
                             'アパレルを出品する',
                             style: TextStyle(
                               color: Colors.black,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                         ],
@@ -111,14 +131,17 @@ class MyPage extends StatelessWidget {
                       ),
                       child: Row(
                         children: [
-                          Icon(
-                            Icons.photo_library_outlined,
-                            color: Colors.black,
+                          Container(
+                            height: 40,
+                            width: 50,
+                            child: Image.asset('images/post.jpg'),
                           ),
+                          SizedBox(width: 10),
                           Text(
                             '写真や文章を投稿する',
                             style: TextStyle(
                               color: Colors.black,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                         ],
@@ -126,7 +149,7 @@ class MyPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: height * 0.08)
+                SizedBox(height: height * 0.09)
               ],
             ),
           );
@@ -397,7 +420,10 @@ class MyPage extends StatelessWidget {
             children: [
               IconButton(
                 onPressed: () {
-                  //todo
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Notice()),
+                  );
                 },
                 icon: Icon(
                   Icons.notifications_none,
@@ -407,7 +433,10 @@ class MyPage extends StatelessWidget {
               ),
               IconButton(
                 onPressed: () {
-                  //todo
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => News()),
+                  );
                 },
                 icon: Icon(
                   Icons.article_outlined,
