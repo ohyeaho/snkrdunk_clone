@@ -76,6 +76,8 @@ class Login extends StatelessWidget {
                 ),
                 textAlign: TextAlign.left,
                 controller: emailController,
+                textInputAction: TextInputAction.next,
+                autovalidateMode: AutovalidateMode.onUserInteraction,
                 decoration: InputDecoration(
                   labelText: 'メールアドレス',
                   border: OutlineInputBorder(
@@ -99,6 +101,7 @@ class Login extends StatelessWidget {
                 ),
                 textAlign: TextAlign.left,
                 controller: passwordController,
+                autovalidateMode: AutovalidateMode.onUserInteraction,
                 decoration: InputDecoration(
                   labelText: 'パスワード',
                   border: OutlineInputBorder(

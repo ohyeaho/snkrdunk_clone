@@ -98,6 +98,8 @@ class SignUp extends StatelessWidget {
                 ),
                 textAlign: TextAlign.left,
                 controller: userNameController,
+                textInputAction: TextInputAction.next,
+                autovalidateMode: AutovalidateMode.onUserInteraction,
                 decoration: InputDecoration(
                   labelText: 'ユーザー名',
                   border: OutlineInputBorder(
@@ -120,6 +122,8 @@ class SignUp extends StatelessWidget {
                 ),
                 textAlign: TextAlign.left,
                 controller: emailController,
+                textInputAction: TextInputAction.next,
+                autovalidateMode: AutovalidateMode.onUserInteraction,
                 decoration: InputDecoration(
                   labelText: 'メールアドレス',
                   border: OutlineInputBorder(
@@ -143,6 +147,7 @@ class SignUp extends StatelessWidget {
                 ),
                 textAlign: TextAlign.left,
                 controller: passwordController,
+                autovalidateMode: AutovalidateMode.onUserInteraction,
                 decoration: InputDecoration(
                   labelText: 'パスワード',
                   border: OutlineInputBorder(
