@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:snkrdunk_clone/screens/media/tab/media_page_calendar.dart';
 import 'package:snkrdunk_clone/screens/media/tab/media_page_latest_article.dart';
 import 'package:snkrdunk_clone/screens/media/tab/media_page_new_post.dart';
+import 'package:snkrdunk_clone/screens/news.dart';
+import 'package:snkrdunk_clone/screens/notice.dart';
 
 class Media extends StatelessWidget {
   @override
@@ -46,7 +48,10 @@ class Media extends StatelessWidget {
               children: [
                 IconButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/home');
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Notice()),
+                    );
                   },
                   icon: Icon(
                     Icons.notifications_none,
@@ -56,7 +61,10 @@ class Media extends StatelessWidget {
                 ),
                 IconButton(
                   onPressed: () {
-                    //todo
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => News()),
+                    );
                   },
                   icon: Icon(
                     Icons.article_outlined,

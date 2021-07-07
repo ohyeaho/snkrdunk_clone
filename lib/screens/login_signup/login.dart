@@ -125,7 +125,7 @@ class Login extends StatelessWidget {
                   FirebaseAuth.instance.authStateChanges().listen(
                     (User user) {
                       if (user != null) {
-                        Navigator.pushReplacementNamed(context, "/menu");
+                        Navigator.pushReplacementNamed(context, "/my_page");
                       }
                     },
                   );

@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:snkrdunk_clone/screens/news.dart';
+import 'package:snkrdunk_clone/screens/notice.dart';
 
 class Favorite extends StatelessWidget {
   final List<String> favoriteItem = ['one', 'two', 'three', 'four', 'five'];
@@ -21,7 +23,10 @@ class Favorite extends StatelessWidget {
             children: [
               IconButton(
                 onPressed: () {
-                  //todo
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Notice()),
+                  );
                 },
                 icon: Icon(
                   Icons.notifications_none,
@@ -31,7 +36,10 @@ class Favorite extends StatelessWidget {
               ),
               IconButton(
                 onPressed: () {
-                  //todo
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => News()),
+                  );
                 },
                 icon: Icon(
                   Icons.article_outlined,

@@ -4,6 +4,8 @@ import 'package:provider/provider.dart';
 import 'package:snkrdunk_clone/screens/market/market.model.dart';
 import 'package:snkrdunk_clone/screens/market/market_apparel.dart';
 import 'package:snkrdunk_clone/screens/market/market_sneaker.dart';
+import 'package:snkrdunk_clone/screens/news.dart';
+import 'package:snkrdunk_clone/screens/notice.dart';
 
 class Market extends StatelessWidget {
   final Map<int, Widget> icons = <int, Widget>{
@@ -51,7 +53,10 @@ class Market extends StatelessWidget {
           actions: [
             IconButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/home');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Notice()),
+                );
               },
               icon: Icon(
                 Icons.notifications_none,
@@ -61,7 +66,10 @@ class Market extends StatelessWidget {
             ),
             IconButton(
               onPressed: () {
-                //todo
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => News()),
+                );
               },
               icon: Icon(
                 Icons.article_outlined,
