@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:snkrdunk_clone/components/button_market.dart';
 import 'package:snkrdunk_clone/components/button_market_ranking.dart';
 import 'package:snkrdunk_clone/components/grey_space.dart';
+import 'package:snkrdunk_clone/screens/item_page/item_page.dart';
+import 'package:snkrdunk_clone/screens/item_page/item_page_aj1bred.dart';
+import 'package:snkrdunk_clone/screens/item_page/item_page_aj4.dart';
+import 'package:snkrdunk_clone/screens/item_page/item_page_ambush.dart';
 
 class MarketSneaker extends StatelessWidget {
   @override
@@ -33,6 +37,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarketRanking(
                 imageRanking: 'images/no_2.jpg',
@@ -42,6 +52,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'アンブッシュ × ナイキ ダンク ハイ "ブラック"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPageAmbush()),
+                  );
+                },
               )
             ],
           ),
@@ -57,6 +73,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン4 "ブレッド" 2019',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPageAj4()),
+                  );
+                },
               ),
               ButtonMarketRanking(
                 imageRanking: 'images/no_4.jpg',
@@ -66,6 +88,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "ブレッド (2016)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPageAj1bred()),
+                  );
+                },
               )
             ],
           ),
@@ -81,6 +109,9 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'トラヴィス・スコット×ナイキ エアジョーダン1 レトロ ハイ OG',
+                onPressed: () {
+                  //todo: ボタン処理
+                },
               ),
               ButtonMarketRanking(
                 imageRanking: 'images/no_6.jpg',
@@ -90,6 +121,9 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン4 レトロ "ホワイト セット (2016)"',
+                onPressed: () {
+                  //todo: ボタン処理
+                },
               ),
               ButtonMarketRanking(
                 imageRanking: 'images/no_7.jpg',
@@ -99,6 +133,9 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'オフホワイト×ナイキ エアラバー ダンク "ブラック/ホワイトグリーン"',
+                onPressed: () {
+                  //todo: ボタン処理
+                },
               )
             ],
           ),
@@ -114,6 +151,9 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ユニオン × ナイキ エアジョーダン4 "GUAVA"',
+                onPressed: () {
+                  //todo: ボタン処理
+                },
               ),
               ButtonMarketRanking(
                 imageRanking: 'images/no_7.jpg',
@@ -123,6 +163,9 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "ブラック トゥ (2016)"',
+                onPressed: () {
+                  //todo: ボタン処理
+                },
               ),
               ButtonMarketRanking(
                 imageRanking: 'images/no_7.jpg',
@@ -132,6 +175,9 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ ダンク ロー SP "ホワイト/ユニバーシティレッド"',
+                onPressed: () {
+                  //todo: ボタン処理
+                },
               )
             ],
           ),
@@ -188,6 +234,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -196,6 +248,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -204,6 +262,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               )
             ],
           ),
@@ -218,6 +282,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -226,6 +296,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -234,6 +310,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               )
             ],
           ),
@@ -248,6 +330,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -256,6 +344,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -264,6 +358,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               )
             ],
           ),
@@ -320,6 +420,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -328,6 +434,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -336,6 +448,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               )
             ],
           ),
@@ -350,6 +468,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -358,6 +482,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -366,6 +496,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               )
             ],
           ),
@@ -380,6 +516,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -388,6 +530,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -396,6 +544,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               )
             ],
           ),
@@ -452,6 +606,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -460,6 +620,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -468,6 +634,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               )
             ],
           ),
@@ -482,6 +654,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -490,6 +668,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -498,6 +682,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               )
             ],
           ),
@@ -512,6 +702,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -520,6 +716,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -528,6 +730,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               )
             ],
           ),
@@ -584,6 +792,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -592,6 +806,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -600,6 +820,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               )
             ],
           ),
@@ -614,6 +840,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -622,6 +854,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -630,6 +868,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               )
             ],
           ),
@@ -644,6 +888,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -652,6 +902,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -660,6 +916,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               )
             ],
           ),
@@ -716,6 +978,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -724,6 +992,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -732,6 +1006,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               )
             ],
           ),
@@ -746,6 +1026,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -754,6 +1040,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -762,6 +1054,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               )
             ],
           ),
@@ -776,6 +1074,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -784,6 +1088,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -792,6 +1102,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               )
             ],
           ),
@@ -848,6 +1164,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -856,6 +1178,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -864,6 +1192,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               )
             ],
           ),
@@ -878,6 +1212,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -886,6 +1226,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -894,6 +1240,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               )
             ],
           ),
@@ -908,6 +1260,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -916,6 +1274,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -924,6 +1288,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               )
             ],
           ),
@@ -980,6 +1350,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -988,6 +1364,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -996,6 +1378,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               )
             ],
           ),
@@ -1010,6 +1398,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -1018,6 +1412,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -1026,6 +1426,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               )
             ],
           ),
@@ -1040,6 +1446,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -1048,6 +1460,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               ),
               ButtonMarket(
                 image:
@@ -1056,6 +1474,12 @@ class MarketSneaker extends StatelessWidget {
                 stock: '99+',
                 offer: '99+',
                 name: 'ナイキ エアジョーダン1 レトロ "シカゴ (2015)"',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ItemPage()),
+                  );
+                },
               )
             ],
           ),
