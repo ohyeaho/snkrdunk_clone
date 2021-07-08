@@ -7,14 +7,17 @@ class ButtonMarketRanking extends StatelessWidget {
   final String stock;
   final String offer;
   final String name;
+  final Function onPressed;
 
-  ButtonMarketRanking(
-      {@required this.imageRanking,
-      @required this.image,
-      @required this.price,
-      @required this.stock,
-      @required this.offer,
-      @required this.name});
+  ButtonMarketRanking({
+    @required this.imageRanking,
+    @required this.image,
+    @required this.price,
+    @required this.stock,
+    @required this.offer,
+    @required this.name,
+    @required this.onPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -23,9 +26,7 @@ class ButtonMarketRanking extends StatelessWidget {
         style: TextButton.styleFrom(
           primary: Colors.black,
         ),
-        onPressed: () {
-          //todo: ボタン処理
-        },
+        onPressed: onPressed,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

@@ -6,13 +6,16 @@ class ButtonMarket extends StatelessWidget {
   final String stock;
   final String offer;
   final String name;
+  final Function onPressed;
 
-  ButtonMarket(
-      {@required this.image,
-      @required this.price,
-      @required this.stock,
-      @required this.offer,
-      @required this.name});
+  ButtonMarket({
+    @required this.image,
+    @required this.price,
+    @required this.stock,
+    @required this.offer,
+    @required this.name,
+    @required this.onPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +24,7 @@ class ButtonMarket extends StatelessWidget {
         style: TextButton.styleFrom(
           primary: Colors.black,
         ),
-        onPressed: () {
-          //todo: ボタン処理
-        },
+        onPressed: onPressed,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
