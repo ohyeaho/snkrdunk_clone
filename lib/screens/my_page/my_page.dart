@@ -177,26 +177,27 @@ class MyPage extends StatelessWidget {
                     child: ClipRRect(
                       child: Container(
                         child: StreamBuilder<DocumentSnapshot>(
-                            stream: UserManage().getUid(),
-                            builder: (context, snapshot) {
-                              if (snapshot.hasData) {
-                                return ClipRRect(
-                                  borderRadius: BorderRadius.circular(75),
-                                  child: snapshot.data['imageURL'] != ''
-                                      ? Image.network(
-                                          snapshot.data['imageURL'],
-                                          fit: BoxFit.fill,
-                                        )
-                                      : FittedBox(
-                                          child: Icon(
-                                            Icons.account_circle,
-                                          ),
+                          stream: UserManage().getUid(),
+                          builder: (context, snapshot) {
+                            if (snapshot.hasData) {
+                              return ClipRRect(
+                                borderRadius: BorderRadius.circular(75),
+                                child: snapshot.data['imageURL'] != ''
+                                    ? Image.network(
+                                        snapshot.data['imageURL'],
+                                        fit: BoxFit.fill,
+                                      )
+                                    : FittedBox(
+                                        child: Icon(
+                                          Icons.account_circle,
                                         ),
-                                );
-                              } else {
-                                return Text('Loading...');
-                              }
-                            }),
+                                      ),
+                              );
+                            } else {
+                              return Text('Loading...');
+                            }
+                          },
+                        ),
                       ),
                     ),
                   ),

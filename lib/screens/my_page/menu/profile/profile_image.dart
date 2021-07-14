@@ -62,24 +62,24 @@ class ProfileImage extends StatelessWidget {
                                   )
                                 : Container(
                                     child: StreamBuilder<DocumentSnapshot>(
-                                        stream: UserManage().getUid(),
-                                        builder: (context, snapshot) {
-                                          if (snapshot.hasData) {
-                                            return snapshot.data['imageURL'] !=
-                                                    ''
-                                                ? Image.network(
-                                                    snapshot.data['imageURL'],
-                                                    fit: BoxFit.fill,
-                                                  )
-                                                : FittedBox(
-                                                    child: Icon(
-                                                      Icons.account_circle,
-                                                    ),
-                                                  );
-                                          } else {
-                                            return Text('Loading...');
-                                          }
-                                        }),
+                                      stream: UserManage().getUid(),
+                                      builder: (context, snapshot) {
+                                        if (snapshot.hasData) {
+                                          return snapshot.data['imageURL'] != ''
+                                              ? Image.network(
+                                                  snapshot.data['imageURL'],
+                                                  fit: BoxFit.fill,
+                                                )
+                                              : FittedBox(
+                                                  child: Icon(
+                                                    Icons.account_circle,
+                                                  ),
+                                                );
+                                        } else {
+                                          return Text('Loading...');
+                                        }
+                                      },
+                                    ),
                                   ),
                           ),
                         ),
