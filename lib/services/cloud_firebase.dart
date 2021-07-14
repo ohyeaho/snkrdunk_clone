@@ -56,6 +56,7 @@ class UserManage {
         .doc(user.uid)
         .set({
           'userName': userName,
+          'imageURL': '',
           'uri': '',
         })
         .then((value) => print('add successfly'))

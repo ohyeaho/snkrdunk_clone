@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -5,7 +6,9 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:snkrdunk_clone/components/bottom_navigation_bar.dart';
 import 'package:snkrdunk_clone/ios_picker.dart';
+import 'package:snkrdunk_clone/screens/my_page/menu/profile/profile_image.dart';
 import 'package:snkrdunk_clone/services/authentication_service.dart';
+import 'package:snkrdunk_clone/services/cloud_firebase.dart';
 
 class Profile extends StatelessWidget {
   final TextEditingController userNameController = TextEditingController();
@@ -24,6 +27,7 @@ class Profile extends StatelessWidget {
           'プロフィール',
           style: TextStyle(
             color: Colors.black,
+            fontWeight: FontWeight.bold,
           ),
         ),
       ),
@@ -42,6 +46,69 @@ class Profile extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 23,
                   fontWeight: FontWeight.w600,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 20.0),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 120,
+                      width: 120,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(75),
+                        child: InkWell(
+                          onTap: () async {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ProfileImage()),
+                            );
+                          },
+                          child: Container(
+                            child: StreamBuilder<DocumentSnapshot>(
+                                stream: UserManage().getUid(),
+                                builder: (context, snapshot) {
+                                  if (snapshot.hasData) {
+                                    return ClipRRect(
+                                      borderRadius: BorderRadius.circular(75),
+                                      child: snapshot.data['imageURL'] != ''
+                                          ? Image.network(
+                                              snapshot.data['imageURL'],
+                                              fit: BoxFit.fill,
+                                            )
+                                          : FittedBox(
+                                              child: Icon(
+                                                Icons.account_circle,
+                                              ),
+                                            ),
+                                    );
+                                  } else {
+                                    return Text('Loading...');
+                                  }
+                                }),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 20),
+                    OutlinedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProfileImage()),
+                        );
+                      },
+                      child: Text('変更する'),
+                      style: OutlinedButton.styleFrom(
+                        primary: Colors.black,
+                        side: BorderSide(color: Colors.black),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 35, vertical: 12),
+                      ),
+                    )
+                  ],
                 ),
               ),
               Text('ユーザー名'),

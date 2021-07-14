@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -6,6 +7,7 @@ import 'package:snkrdunk_clone/screens/login_signup/sign_up.dart';
 import 'package:snkrdunk_clone/screens/news.dart';
 import 'package:snkrdunk_clone/screens/notice.dart';
 import 'package:snkrdunk_clone/screens/post/new_post.dart';
+import 'package:snkrdunk_clone/services/cloud_firebase.dart';
 
 class MyPageAuth extends StatelessWidget {
   @override
@@ -169,10 +171,36 @@ class MyPage extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Icon(
-                    Icons.account_circle,
-                    size: 60,
+                  Container(
+                    height: 65,
+                    width: 65,
+                    child: ClipRRect(
+                      child: Container(
+                        child: StreamBuilder<DocumentSnapshot>(
+                            stream: UserManage().getUid(),
+                            builder: (context, snapshot) {
+                              if (snapshot.hasData) {
+                                return ClipRRect(
+                                  borderRadius: BorderRadius.circular(75),
+                                  child: snapshot.data['imageURL'] != ''
+                                      ? Image.network(
+                                          snapshot.data['imageURL'],
+                                          fit: BoxFit.fill,
+                                        )
+                                      : FittedBox(
+                                          child: Icon(
+                                            Icons.account_circle,
+                                          ),
+                                        ),
+                                );
+                              } else {
+                                return Text('Loading...');
+                              }
+                            }),
+                      ),
+                    ),
                   ),
+                  SizedBox(width: 10),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
