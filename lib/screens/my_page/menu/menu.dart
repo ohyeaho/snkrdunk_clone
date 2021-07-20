@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:snkrdunk_clone/components/list_button.dart';
 import 'package:snkrdunk_clone/components/list_header.dart';
+import 'package:snkrdunk_clone/screens/my_page/menu/personal_info.dart';
 
 class Menu extends StatelessWidget {
   @override
@@ -32,8 +33,10 @@ class Menu extends StatelessWidget {
       ListButton(
         listText: '本人情報',
         onTap: () {
-          //todo: ボタン処理
-          // Navigator.pushNamed(context, '/profile');
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => PersonalInfo()),
+          );
         },
       ),
       ListButton(

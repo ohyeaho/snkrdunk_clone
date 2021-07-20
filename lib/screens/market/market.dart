@@ -28,14 +28,16 @@ class Market extends StatelessWidget {
               borderRadius: BorderRadius.circular(30),
             ),
             child: TextButton(
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.search,
-                    color: Colors.black,
-                  ),
-                  Text('ブランドやスニーカー名で検索'),
-                ],
+              child: FittedBox(
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.search,
+                      color: Colors.black,
+                    ),
+                    Text('ブランドやスニーカー名で検索'),
+                  ],
+                ),
               ),
               style: ElevatedButton.styleFrom(
                 onPrimary: Colors.grey,

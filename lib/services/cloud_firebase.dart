@@ -43,19 +43,37 @@ class UserManage {
         .catchError((e) => print('failded to add password: $e'));
   }
 
-  Future<void> updatePaypayUrI(String uri) {
+  Future<void> updatePersonalInfo(
+    String userName,
+    String birthday,
+    String age,
+  ) {
     return users
         .doc(user.uid)
-        .update({'uri': uri})
-        .then((value) => print('uri add successfly'))
-        .catchError((e) => print('failded to add uri: $e'));
+        .update({
+          'updateAt': Timestamp.now(),
+          'userName': userName,
+          'birthday': birthday,
+          'age': age,
+        })
+        .then((value) => print('personal_info add successfly'))
+        .catchError((e) => print('failded to add personal_info: $e'));
   }
 
-  Future<void> setUserAccount({@required String userName}) {
+  Future<void> setUserAccount({
+    @required String userName,
+    @required String gender,
+    @required String birthday,
+    @required String age,
+  }) {
     return users
         .doc(user.uid)
         .set({
+          'createAt': Timestamp.now(),
           'userName': userName,
+          'gender': '',
+          'birthday': '',
+          'age': '',
           'imageURL': '',
           'uri': '',
         })

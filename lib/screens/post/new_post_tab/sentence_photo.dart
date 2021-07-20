@@ -79,7 +79,7 @@ class SentencePhoto extends StatelessWidget {
         ),
       ),
       Container(
-        height: 190,
+        height: 195,
         decoration: BoxDecoration(
           color: Colors.grey.shade200,
           border: Border(bottom: BorderSide(color: Colors.grey)),
